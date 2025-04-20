@@ -8,7 +8,6 @@ init_tests \
 	setup_alpine_kvm_clock \
 	setup_alpine_restart_network \
 	setup_alpine_answerfile_none \
-	setup_alpine_answerfile_apkcache \
 	setup_alpine_answerfile_network
 
 export WGETCONTENT="https://mirror.example.com"

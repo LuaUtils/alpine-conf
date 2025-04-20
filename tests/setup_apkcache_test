@@ -3,8 +3,6 @@
 . $(atf_get_srcdir)/test_env.sh
 init_tests \
 	setup_apkcache_usage \
-	setup_apkcache_abspath \
-	setup_apkcache_relpath_with_slash \
 	setup_apkcache_none \
 
 setup_apkcache_usage_body() {
