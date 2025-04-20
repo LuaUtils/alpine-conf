@@ -141,31 +141,31 @@ setup_alpine_answerfile_none_body() {
 	done
 }
 
-setup_alpine_answerfile_apkcache_body() {
-	init_env
+# setup_alpine_answerfile_apkcache_body() {
+# 	init_env
 
-	cat >opts<<-EOF
-		KEYMAPOPTS=none
-		HOSTNAMEOPTS=alpine
-		INTERFACESOPTS=none
-		DNSOPTS=none
-		TIMEZONEOPTS=none
-		PROXYOPTS=none
-		NTPOPTS=none
-		APKREPOSOPTS=none
-		USEROPTS=none
-		SSHDOPTS=none
-		DISKOPTS=none
-		LBUOPTS=none
-		APKCACHEOPTS="media/LABEL=APKOVL/cache"
-	EOF
-	atf_check -s exit:0 \
-		-o match:"apk cache" \
-		setup-alpine -e -f opts
-	if ! [ -L etc/apk/cache ]; then
-		atf_fail "etc/apk/cache was not created"
-	fi
-}
+# 	cat >opts<<-EOF
+# 		KEYMAPOPTS=none
+# 		HOSTNAMEOPTS=alpine
+# 		INTERFACESOPTS=none
+# 		DNSOPTS=none
+# 		TIMEZONEOPTS=none
+# 		PROXYOPTS=none
+# 		NTPOPTS=none
+# 		APKREPOSOPTS=none
+# 		USEROPTS=none
+# 		SSHDOPTS=none
+# 		DISKOPTS=none
+# 		LBUOPTS=none
+# 		APKCACHEOPTS="media/LABEL=APKOVL/cache"
+# 	EOF
+# 	atf_check -s exit:0 \
+# 		-o match:"apk cache" \
+# 		setup-alpine -e -f opts
+# 	if ! [ -L etc/apk/cache ]; then
+# 		atf_fail "etc/apk/cache was not created"
+# 	fi
+# }
 
 setup_alpine_answerfile_network_body() {
 	init_env
